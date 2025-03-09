@@ -63,12 +63,12 @@ jobs:
           platforms: linux/amd64,linux/arm64
           file: package/docker/openelis/Dockerfile
           push: true
-          tags: bahmni/openelis:${{env.ARTIFACT_VERSION}},bahmni/openelis:latest
-      - name: Push Translations to Transifex
-        run: |
-          curl -o transifex.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/main/transifex.sh
-          chmod +x transifex.sh
-          ./transifex.sh push
-          rm transifex.sh
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+          tags: venevital/openelis:${{env.ARTIFACT_VERSION}},venevital/openelis:latest
+      # - name: Push Translations to Transifex
+      #   run: |
+      #     curl -o transifex.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/main/transifex.sh
+      #     chmod +x transifex.sh
+      #     ./transifex.sh push
+      #     rm transifex.sh
+      #   env:
+      #     TX_TOKEN: ${{ secrets.TX_TOKEN }}
