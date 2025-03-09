@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientReport" pageWidth="485" pageHeight="650" whenNoDataType="AllSectionsNoDetail" columnWidth="465" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" whenResourceMissingType="Empty">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientReport" pageWidth="485" pageHeight="650" whenNoDataType="AllSectionsNoDetail" columnWidth="465" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" whenResourceMissingType="Empty" resourceBundle="PatientReportHaitiClinical">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.0"/>
@@ -113,7 +113,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[Name]]></text>
+					<text><![CDATA[$R{patientReportHaitiClinical.label.name}]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement x="100" y="66" width="220" height="14"/>
@@ -137,7 +137,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[  Age]]></text>
+					<text><![CDATA[$R{patientReportHaitiClinical.label.age}]]></text>
 				</staticText>
 				<textField pattern="" isBlankWhenNull="true">
 					<reportElement x="370" y="66" width="30" height="14"/>
@@ -161,7 +161,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[ Sex]]></text>
+					<text><![CDATA[$R{patientReportHaitiClinical.label.sex}]]></text>
 				</staticText>
 				<textField pattern="" isBlankWhenNull="true">
 					<reportElement x="440" y="66" width="25" height="14">
@@ -187,7 +187,7 @@
                         <rightPen lineWidth="0.5"/>
                     </box>
                     <textElement verticalAlignment="Middle"/>
-                    <text><![CDATA[ Patient ID]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.patientId}]]></text>
                 </staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement x="100" y="80" width="80" height="14"></reportElement>
@@ -211,7 +211,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<text><![CDATA[Father/Husband's Name]]></text>
+					<text><![CDATA[$R{patientReportHaitiClinical.label.fatherHusbandName}]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
 					<reportElement x="310" y="80" width="155" height="14"></reportElement>
@@ -235,7 +235,7 @@
 						<rightPen lineWidth="0.5"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle"/>
-					<text><![CDATA[Requesting Doctor]]></text>
+					<text><![CDATA[$R{patientReportHaitiClinical.label.requestingDoctor}]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
                     <reportElement x="100" y="94" width="365" height="14"/>
@@ -259,7 +259,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement verticalAlignment="Middle"/>
-					<textFieldExpression class="java.lang.String"><![CDATA["Order Date: " + $F{orderDate}]]></textFieldExpression>
+					<textFieldExpression class="java.lang.String"><![CDATA[$R{patientReportHaitiClinical.label.orderDate} + ": " + $F{orderDate}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="265" y="114" width="200" height="14"/>
@@ -271,7 +271,7 @@
 						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement verticalAlignment="Middle" textAlignment="Right" />
-					<textFieldExpression class="java.lang.String"><![CDATA["Accession Number: " + $F{accessionNumber}]]></textFieldExpression>
+					<textFieldExpression class="java.lang.String"><![CDATA[$R{patientReportHaitiClinical.label.accessionNumber} + ": " + $F{accessionNumber}]]></textFieldExpression>
 				</textField>
             <staticText>
                 <reportElement mode="Opaque" x="0" y="128" width="163" height="14" backcolor="#CCCCCC"/>
@@ -283,7 +283,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Test]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.test}]]></text>	
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="163" y="128" width="63" height="14" backcolor="#CCCCCC"/>
@@ -295,7 +295,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Result]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.result}]]></text>
             </staticText>
             <staticText>
                     <reportElement mode="Opaque" x="226" y="128" width="67" height="14" backcolor="#CCCCCC"/>
@@ -307,7 +307,7 @@
                         <rightPen lineWidth="0.5"/>
                     </box>
                     <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                    <text><![CDATA[Unit]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.unit}]]></text>
                 </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="293" y="128" width="44" height="14" backcolor="#CCCCCC"/>
@@ -319,7 +319,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Alert]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.alert}]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="337" y="128" width="128" height="14" backcolor="#CCCCCC"/>
@@ -331,7 +331,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Valid Range]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.validRange}]]></text>
             </staticText>
 			</band>
 		</groupHeader>
@@ -347,7 +347,7 @@
                         <rightPen lineWidth="0.5"/>
                     </box>
                     <textElement/>
-                    <text><![CDATA[Comments]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.comments}]]></text>
                 </staticText>
                 <staticText>
                     <reportElement x="300" y="0" width="165" height="61"/>
@@ -359,12 +359,12 @@
                         <rightPen lineWidth="0.5"/>
                     </box>
                     <textElement/>
-                    <text><![CDATA[Signature / Validation]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.signatureValidation}]]></text>
                 </staticText>
                 <staticText>
                     <reportElement x="365" y="41" width="100" height="20"/>
                     <textElement verticalAlignment="Middle"/>
-                    <text><![CDATA[Date:]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.date}]]></text>
                 </staticText>
             </band>
 		</groupFooter>
@@ -409,7 +409,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Test]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.test}]]></text>
             </staticText>
             <staticText>
                     <reportElement mode="Opaque" x="226" y="19" width="67" height="14" backcolor="#CCCCCC"/>
@@ -421,7 +421,7 @@
                         <rightPen lineWidth="0.5"/>
                     </box>
                     <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                    <text><![CDATA[Unit]]></text>
+                    <text><![CDATA[$R{patientReportHaitiClinical.label.unit}]]></text>
                 </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="163" y="19" width="63" height="14" backcolor="#CCCCCC"/>
@@ -433,7 +433,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Result]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.result}]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="293" y="19" width="44" height="14" backcolor="#CCCCCC"/>
@@ -445,7 +445,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Alert]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.alert}]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="337" y="19" width="128" height="14" backcolor="#CCCCCC"/>
@@ -457,7 +457,7 @@
 					<rightPen lineWidth="0.5"/>
 				</box>
                 <textElement textAlignment="Center" verticalAlignment="Middle"/>
-                <text><![CDATA[Valid Range]]></text>
+                <text><![CDATA[$R{patientReportHaitiClinical.label.validRange}]]></text>
             </staticText>
 			</band>
 	</pageHeader>
